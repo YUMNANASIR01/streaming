@@ -1,0 +1,11 @@
+[project]
+name = "21-may"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openai-agents>=0.0.15",
+    "python-dotenv>=1.1.0",
+    "rich>=14.0.0",
+]
