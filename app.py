@@ -24,11 +24,11 @@ agent = Agent(
 # ------------------- streaming ----------------------
 #                                             ---- user prompt-------
 async def main():
-    jawab = Runner.run_streamed(starting_agent=agent, input="write a 10 lines of easy") #agentic loop
+    jawab = Runner.run_streamed(agent , "Hi") #agentic loop
     async for event in jawab.stream_events():
-        if event.type == "raw_response_event" and isinstance(event.data , ResponseTextDeltaEvent):
+     if event.type == "raw_response_event" and isinstance(event.data , ResponseTextDeltaEvent):
          rich.print(event.data.delta,end="",flush=True)
-
+ 
 
 if __name__ == "__main__":
     asyncio.run(main())    
